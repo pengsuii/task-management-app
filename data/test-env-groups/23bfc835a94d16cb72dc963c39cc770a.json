@@ -1,0 +1,1 @@
+{"id":"23bfc835a94d16cb72dc963c39cc770a","fullName":"e2e/auth.spec.ts:48:9","name":"TC-AUTH-005: should redirect to dashboard if already logged in","status":"passed","testResultsByEnv":{"default":"58c62d08312345dcb6a22c7aa6f939c7"}}

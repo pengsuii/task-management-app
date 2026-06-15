@@ -1,0 +1,1 @@
+{"id":"3881dba0dc3ec08ca6d1762abfa4d16a","fullName":"e2e/auth.spec.ts:82:9","name":"TC-AUTH-008: should show error when fields are empty on register","status":"passed","testResultsByEnv":{"default":"a0620db327139ce32f9aa135bf2f3d4a"}}

@@ -1,0 +1,1 @@
+{"id":"9bef4fd1910f6c78d41ba770651fcc4a","fullName":"e2e/auth.spec.ts:21:9","name":"TC-AUTH-002: should show error when email and password are empty","status":"passed","testResultsByEnv":{"default":"11b04f76aa05fd90333a25470f40d9e7"}}

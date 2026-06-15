@@ -1,0 +1,1 @@
+{"id":"84b6cfde1c9c6f8147e357bbfd2e783a","fullName":"e2e/auth.spec.ts:69:9","name":"TC-AUTH-007: should show error when full name is empty on register","status":"passed","testResultsByEnv":{"default":"8a253cf14206db363f8b351fe0d2f669"}}

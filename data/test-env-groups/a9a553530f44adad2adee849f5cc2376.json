@@ -1,0 +1,1 @@
+{"id":"a9a553530f44adad2adee849f5cc2376","fullName":"e2e/auth.spec.ts:104:9","name":"TC-AUTH-010: should redirect to login when accessing dashboard without auth","status":"passed","testResultsByEnv":{"default":"0ea9142cfa10b9461d7cf5d9b2b40425"}}
