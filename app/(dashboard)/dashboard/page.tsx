@@ -105,26 +105,49 @@ export default function DashboardPage() {
     setFormError('')
 
     const { data: { user } } = await supabase.auth.getUser()
-    if (!user) return
+    if (!user) {
+      setFormError('User tidak ditemukan, silakan login ulang.')
+      return
+    }
 
     if (editTask) {
       const { error } = await supabase
         .from('tasks')
-        .update({ ...form })
+        .update({
+          title: form.title,
+          description: form.description,
+          status: form.status,
+          priority: form.priority,
+          due_date: form.due_date || null
+        })
         .eq('id', editTask.id)
-      if (!error) {
-        setShowModal(false)
-        fetchTasks()
+
+      if (error) {
+        console.error('Update error:', error)
+        setFormError(`Gagal update task: ${error.message}`)
+        return
       }
     } else {
       const { error } = await supabase
         .from('tasks')
-        .insert([{ ...form, user_id: user.id }])
-      if (!error) {
-        setShowModal(false)
-        fetchTasks()
+        .insert([{
+          title: form.title,
+          description: form.description,
+          status: form.status,
+          priority: form.priority,
+          due_date: form.due_date || null,
+          user_id: user.id
+        }])
+
+      if (error) {
+        console.error('Insert error:', error)
+        setFormError(`Gagal membuat task: ${error.message}`)
+        return
       }
     }
+
+    setShowModal(false)
+    await fetchTasks()
   }
 
   const handleDelete = async (id: string) => {
